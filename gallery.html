@@ -1,0 +1,76 @@
+<! doctype  html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gallery</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th><img src="1.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="5.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="6.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+		</tr>
+		<tr>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+			<th colspan="3" rowspan="2">
+				<div>
+					<img class="image" src="1.jpg" alt="picture" height="400" width="630">
+					<img class="image" src="2.jpg" alt="picture" height="400" width="630">
+					<img class="image" src="3.jpg" alt="picture" height="400" width="630">
+					<img class="image" src="4.jpg" alt="picture" height="400" width="630">
+					<img class="image" src="5.jpg" alt="picture" height="400" width="630">
+					<img class="image" src="6.jpg" alt="picture" height="400" width="630">
+				</div>
+			</th>
+			<th><img src="5.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+		</tr>
+		<tr>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="1.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="6.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+		</tr>
+		<tr>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="5.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="6.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+		</tr>
+		<tr>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="3.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="1.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="5.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="2.jpg" alt="picture" height="200" width="210"></th>
+			<th><img src="4.jpg" alt="picture" height="200" width="210"></th>
+		</tr>
+	</table>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("image");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
